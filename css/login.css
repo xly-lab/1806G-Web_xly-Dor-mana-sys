@@ -1,0 +1,147 @@
+*{
+    font-family: "幼圆", "方正兰亭超细黑简体", "微软雅黑", "微软雅黑 Light", serif;
+    text-align: center;
+}
+.main,.left{
+    margin: 0;
+    padding: 0;
+    display: table-cell;
+}
+body {
+    /*此处背景图自行替换*/
+    /*luqingyingshizhu*/
+    background: url(../img/2.jpg) no-repeat center center fixed;
+    background-size: cover;
+
+}
+.container{
+    top:0;bottom: 0;right: 0;left: 0;
+    position: absolute;
+    margin: auto;
+    width: 900px;
+    height: 500px;
+    display: table;
+}
+.left {
+    background-color: rgba(222,184,135,0.7);
+    width: 500px;
+    height: 500px;
+    left: 0;
+    opacity: 0.7;
+  position: relative;
+}
+.main{
+    background-color: rgb();
+    width: 400px;
+    height: 500px;
+    right: 0;
+    position:absolute;
+
+}
+/*.logo{
+    /*background: url("../img/shiyou.jpg") no-repeat;*/
+  /*width: 500px;
+  height: 350px;
+  opacity: 0.2;
+  margin-top: 150px;
+  transition: all 2s;
+}
+.logo:hover{
+  opacity: 0.7;
+  width: 500px;
+  height: 350px;
+}*/
+h1{
+    width: 100%;
+    font-size: 34px;
+    margin:auto;
+    position:relative;
+    top:100px;
+
+    color:		#D2B48C;
+}
+h2{
+    width: 100%;
+    margin:auto;
+    text-align: center;
+    position:relative;
+    top:105px;
+    font-size: 20px;
+    color: 	#DEB887;
+}
+form{
+    position:relative;
+    top:150px;
+}
+li{
+    list-style: none;
+    border: none;
+    width: 70%;
+    margin:1em auto ;
+    height: 2em;
+    padding:0;
+}
+#admin,#password{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #D2B48C;
+    font-size:20px;
+    height: 1.5em;
+    line-height: 1.5em;
+    margin:0 auto;
+}
+input:focus{
+    outline: none;
+}
+span{
+    font-size: 12px;
+    position: absolute;
+    right: 15%;
+}
+span:hover{
+    text-decoration: underline;
+}
+#login{
+    width: 100%;
+    background-color: #dec096;
+    color: #fef7ff;
+    border: none;
+    border-radius: 1em;
+    font-size:20px;
+    height: 2em;
+    line-height: 2em;
+    transition: 1s;
+}
+
+#login:hover{
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  background: #110e0c;
+}
+#forget_pass{
+  cursor: pointer;
+}
+
+.hide{
+  display: none;
+}
+.show{
+  color: red;
+  right: 120px;
+  display: block;
+}
+.error_login{
+  color: red;
+  right: 120px;
+}
+.school_logo{
+  left: 200px;
+  top:80px;
+  font-size: 50px;
+  line-height: 50px;
+  text-align: center;
+  width: 50px;
+  height: 300px;
+  color: #ff6600;
+  position: absolute;
+}

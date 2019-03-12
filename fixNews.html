@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>寝室管理-修改信息</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/homepage.css" rel="stylesheet">
+    <link href="css/nav-bar.css" rel="stylesheet">
+    <link href="css/message.css" rel="stylesheet">
+  <style>
+.error_choose{
+      display: none;
+      color: red;
+      font-size: 10px;
+    }
+    .jump-to-my{
+    	position: absolute;
+    	top: 0px;
+    }
+ .font-My-home{
+      position: absolute;
+      height: 73px;
+      width: 600px;
+      font-size: 32px;
+      line-height: 73px;
+      text-align: center;
+      color: rgb(16,45,105);
+      left: 260px;
+      top: 0;
+      font-weight: 700;
+      font-family:"仿宋";
+    }
+    .box{
+    		border: 1px solid #ccc;
+    		left: 195px;
+    }
+    .box,.put-password,.fix-news,.verify-news{
+    	position: relative;
+    	width: 956px;
+    	height: 558px;
+    	top: 5px;
+    	left: 0px;
+    	/*border: 1px solid #000;*/  	
+    }
+    #password-verify{
+    	position: absolute;
+    	top: 100px;
+    	width: 400px;
+    	height: 40px;
+    	left: 300px;
+    }
+    .put-password>button{
+    	position: absolute;
+    	top: 150px;
+    	left: 400px;
+    	width: 200px;
+    	height: 40px;
+    }
+    affirm_news{
+  position: relative;
+  margin: 100px auto;
+  width: 700px;
+  height: 300px;
+  border: 1px solid #CCC;
+}
+.affirm_header{
+  width: 100%;
+  height: 50px;
+  font-size: 40px;
+  line-height: 50px;
+  text-align: center;
+  font-family: "Segoe UI Semibold";
+  background: #b3d4fc;
+}
+.affirm_news>button{
+  position: absolute;
+  bottom: 10px;
+  left: 70px;
+  font-family: "幼圆", "方正兰亭超细黑简体", "微软雅黑", "微软雅黑 Light", serif;
+  border-radius: 10px;
+  width: 80%;
+  height: 60px;
+  font-size: 40px;
+  line-height: 60px;
+  text-align: center;
+  background: #b3d4fc;
+  transition: 1s;
+}
+.affirm_news>button:hover{
+  color: white;
+  background: #dec096;
+}
+.affirm_middle>ul{
+  position: absolute;
+  left: 100px;
+  top: 70px;
+  width: 70%;
+  height: 50%;
+  text-align: left;
+  border: 1px solid #000;
+}
+.affirm_middle>ul>li{
+  margin-top: 8px;
+}
+  </style>
+</head>
+<body>
+<!--导航栏-->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid nav-center">
+        <div class="navbar-header">
+            <!--     <a class="navbar-brand" href="#">学生自助寝室管理系统</a>-->
+            <img  src="img/logo1.jpg">
+        </div>
+        <div class="nav-right">
+            <ul class="nav navbar-nav">
+                <li><a href="homepage.html">选寝室</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        我的
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="mydo.html">我的寝室</a></li>
+                        <li><a href="fixNews.html">修改信息</a></li>
+                        <li><a href="message.html">个人信息</a></li>
+                        <li><a href="login.html">退出登录</a></li>
+                    </ul>
+                </li>
+                <li><a href="needService.html">联系客服</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+ <span class="font-My-home">修改信息</span>
+<!--导航栏结束-->
+<ul class="Progress">
+    <li id="Pword" class="active"><span></span>1.请输入你的密码</li>
+    <li id="fNews"><span></span>2.修改你的信息</li>
+    <li id="confirm"><span></span>3.确认</li>
+</ul>
+<main>
+	<div class="box">
+		<div class="put-password">
+			<input type="text" id="password-verify" value="" placeholder="请输入你的密码(123)" />
+			<button>提交</button>
+		</div>
+		<div class="fix-news">
+			<br />
+			姓名：<input type="text" disabled value="姓名" /><br /><br />
+			学号：<input type="text" disabled="true" value="学号" /><br /><br />
+			生日：<input type="date" /><br /><br />
+			电子邮件：<input type="email" /><br /><br />
+			个性签名：<br /><input type="text" name="" id="" value="" style="width: 500px;height: 50px;"/>
+			<div class="form-group">
+            <label class="col-sm-2 control-label">性格及兴趣爱好</label>
+            <div class="col-sm-10">
+                <p class="form-control-static"><span id="interests-num">0</span>/10<span class="error_choose">最多只能选十个，请仔细挑选最适合的标签</span></p>
+            </div>
+            <div class="col-sm-offset-2 col-sm-10" id="add-interest">
+                <button type="button" class="btn btn-default interests ">唱歌</button>
+                <button type="button" class="btn btn-default interests">足球</button>
+                <button type="button" class="btn btn-default interests">篮球</button>
+                <button type="button" class="btn btn-default interests">羽毛球</button>
+                <button type="button" class="btn btn-default interests">舞蹈</button>
+                <button type="button" class="btn btn-default interests">安静</button>
+                <button type="button" class="btn btn-default interests">活泼</button>
+                <button type="button" class="btn btn-default interests">唱歌</button>
+                <button type="button" class="btn btn-default interests">足球</button>
+                <button type="button" class="btn btn-default interests">篮球</button>
+                <button type="button" class="btn btn-default interests">羽毛球</button>
+                <button type="button" class="btn btn-default interests">舞蹈</button>
+                <button type="button" class="btn btn-default interests">安静</button>
+                <button type="button" class="btn btn-default interests">活泼</button>
+                <button type="button" class="btn btn-default interests">唱歌</button>
+                <button type="button" class="btn btn-default interests">足球</button>
+                <button type="button" class="btn btn-default interests">篮球</button>
+                <button type="button" class="btn btn-default interests">羽毛球</button>
+                <button type="button" class="btn btn-default interests">唱歌</button>
+                <button type="button" class="btn btn-default interests">足球</button>
+                <button type="button" class="btn btn-default interests">篮球</button>
+                <button type="button" class="btn btn-default interests">羽毛球</button>
+                <button type="button" class="btn btn-default interests">舞蹈</button>
+                <button type="button" class="btn btn-default interests">安静</button>
+                <button type="button" class="btn btn-default interests">活泼</button>
+                <button type="button" class="btn btn-default interests">唱歌</button>
+                <button type="button" class="btn btn-default interests">足球</button>
+                <button type="button" class="btn btn-default interests">篮球</button>
+                <button type="button" class="btn btn-default interests">羽毛球</button>
+                <button type="button" class="btn btn-default interests">舞蹈</button>
+                <button type="button" class="btn btn-default interests">安静</button>
+                <button type="button" class="btn btn-default interests">活泼</button>
+                <button type="button" class="btn btn-default interests">唱歌</button>
+                <button type="button" class="btn btn-default interests">足球</button>
+                <button type="button" class="btn btn-default interests">篮球</button>
+                <button type="button" class="btn btn-default interests">羽毛球</button>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">隐藏个人爱好</label>
+            <div class="radio col-sm-1">
+                    <label>
+                        <input type="radio" name="optionsRadios"  value="y"> 是
+                    </label>
+            </div>
+            <div class="radio col-sm-1">
+                <label>
+                    <input type="radio" name="optionsRadios"  value="n" checked>否
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">隐藏个人信息</label>
+            <div class="radio col-sm-1">
+                    <label>
+                        <input type="radio" name="optionsRadios"  value="y"> 是
+                    </label>
+            </div>
+            <div class="radio col-sm-1">
+                <label>
+                    <input type="radio" name="optionsRadios"  value="n" checked>否
+                </label>
+            </div>
+        </div>
+	        <div class="form-group">
+	            <button type="button" class="btn btn-success col-sm-offset-10 btn1">提交</button>
+	            <button type="button" class="btn btn-danger btn2">取消</button>
+	        </div>
+		</div>
+		<div class="verify-news">
+			<div class="choose_confirm">
+			    <div class="affirm_news">
+				     <div class="affirm_header">
+				        <span>确认寝室信息</span>
+				    </div>
+				    <div class="affirm_middle">
+				        <ul>
+				          <li class="sure-one">姓名：</li>
+				          <li>学号：</li>
+				          <li>个性签名：</li>
+				          <li>爱好：</li>
+				          <li>邮箱：</li>
+				        </ul>
+				    </div>
+				    <button>确认</button>
+				    </div>
+		  	</div>
+		</div>
+		<div class="jump-to-my">
+			页面跳转中...
+		</div>
+	</div>
+</main>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/message.js"></script>
+<script>
+	/**
+ * Created by luqingying on 2018/4/8.
+ */
+$(function(){
+	$(".fix-news").hide();//选择床位页面阴藏
+		  $(".verify-news").hide();//确认页面阴藏
+		  $(".jump-to-my").hide();//跳转提示页面阴藏
+    $(".put-password>button").click(function(){
+    	  
+        var Password = $(".put-password").find("input").val();
+        if(Password==="123"){
+        	$("#Pword").removeClass("active").addClass("success").find("span").html("<img src='img/greenclick.png'>");//UI改变
+        	$("#fNews").addClass("active");
+        	$(".put-password").hide();
+        	$(".fix-news").show();
+        }
+        else{
+        	alert("你的密码输入错误！");
+        }
+    $(".btn1").click(function(){
+    	if(confirm("是否提交？")){
+    		$("#fNews").removeClass("active").addClass("success").find("span").html("<img src='img/greenclick.png'>");//UI改变
+        	$("#confirm").addClass("active");
+        	$(".fix-news").hide();
+        	$(".verify-news").show();
+    	}  	
+    });
+    $(".btn2").click(function(){
+    	location.href="mydo.html";
+    });
+    
+    $(".affirm_news>button").click(function () {
+	    $("#confirm").removeClass("active").addClass("success").find("span").html("<img src='img/greenclick.png'>");
+	    $(".choose_confirm").hide();
+	    $(".jump-to-my").show();
+	    var timer=setInterval( function(){
+	    	location.href="mydo.html"
+	    },1000)
+ 	});
+        
+    });
+
+
+
+
+
+
+
+
+
+
+//$(".choose_bed").hide();//选择床位页面阴藏
+//$(".choose_confirm").hide();//确认页面阴藏
+//$(".jump-to-my").hide();//跳转提示页面阴藏
+////床位选择后，确认点击事件
+//$("#select").click(function(){
+//  var roommessage = $("#room-num-red").text();
+//  if(roommessage == "还未选寝室"){
+//    alert("您还未选寝室");
+//  }
+//  else{
+//    $("#chooseroom").removeClass("active").addClass("success").find("span").html("<img src='img/greenclick.png'>");//UI改变
+//    $("#choosebed").addClass("active");
+//    $(".choose_room").hide();
+//    $(".choose_bed").show();
+//  }
+//});
+////床位选择后，确认点击事件
+//$("#select-bed").click(function(){
+//  var roommessage = $("#room-num-red-next").text();
+//  if(roommessage == "还未选床位"){
+//    alert("您还未选床位");
+//  }
+//  else{
+//    $("#choosebed").removeClass("active").addClass("success").find("span").html("<img src='img/greenclick.png'>");
+//    $("#confirm").addClass("active");
+//    $(".choose_bed").hide();
+//    $(".choose_confirm").show();
+//  }
+//});
+////确认信息页面 点击事件
+//$(".Bed-choosed>ul>li").click(function () {
+//  if($(this).hasClass("clicked")){
+//    alert("该床位已有人！");
+//  }
+//  else {
+//    if (confirm("确认选择此床位？")) {
+//      $(this).addClass("clicked");
+//      $("#room-num-red-next").html("你所选床号为" + $(this).index());
+//    }
+//  }
+//});
+//$(".affirm_news>button").click(function () {
+//  $("#confirm").removeClass("active").addClass("success").find("span").html("<img src='img/greenclick.png'>");
+//  $(".choose_confirm").hide();
+//  $(".jump-to-my").show();
+//  var timer=setInterval( function(){
+//  	location.href="mydo.html"
+//  },1000)
+//})
+});
+
+	
+</script>
+</body>
+</html>

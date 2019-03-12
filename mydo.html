@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>西南石油大学-寝室管理</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/homepage.css" rel="stylesheet">
+    <link href="css/nav-bar.css" rel="stylesheet">
+  <style>
+  	body{
+  		margin: 0;
+  		padding: 0;
+  		position: relative;
+  	}
+.font-My-home{
+      position: absolute;
+      height: 73px;
+      width: 400px;
+      font-size: 32px;
+      line-height: 73px;
+      text-align: center;
+      color: rgb(16,45,105);
+      left: 425px;
+      top: 0;
+      font-weight: 700;
+      font-family:"仿宋";
+    }
+    .dormitory-body{
+    	width: 1100px;
+    	height: 598px;
+    	position: absolute;
+    	top: 74px;
+    	left: 127px;
+    	border: 1px solid #ccc;
+    }
+    /*左部*/
+    .Dbody-left{
+    	position: absolute;
+    	width:450px ;
+    	height: 595px;
+    	left: 5px;
+    	top: 0px;
+    	border-right: 1px solid #CCCCCC;
+    }
+    .Dbody-left-top{
+    	position: absolute;
+    	width: 440px;
+    	height: 50px;
+    	font-family: "franklin gothic medium";
+    	left: 5px;
+    	top: 5px;
+    	border: 1px solid #ccc;
+    	font-size: 40px;
+    	line-height: 50px;
+    	text-align: center;
+    }
+    .Dbody-left-middle{
+    	position: absolute;
+      width: 188px;
+    height: 244px;
+    left: 133px;
+    top: 110px;
+    	border: 1px solid #CCCCCC;
+    }
+    .Dbody-left-bottom{
+    	position: absolute;
+    	width:440px ;
+    	height: 120px;
+    	left: 5px;
+    	bottom: 5px;
+    	border: 1px solid #CCCCCC;
+    }
+    /*右部*/
+   .Dbody-right{
+   	position: absolute;
+   	width: 600px;
+   	height: 598px;
+   	border-left: 1px solid #ccc;
+   	right: 5px;
+   	top: 0px;
+   }
+</style>
+</head>
+
+<body>
+<!--导航栏-->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid nav-center">
+        <div class="navbar-header">
+       <!--     <a class="navbar-brand" href="#">学生自助寝室管理系统</a>-->
+            <img  src="img/logo1.jpg">
+        </div>
+        <div class="nav-right">
+            <ul class="nav navbar-nav">
+                <li><a href="homepage.html">选寝室</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        我的
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="mydo.html">我的寝室</a></li>
+                        <li><a href="message.html">个人信息</a></li>
+                        <li><a href="fixNews.html">修改信息</a></li>
+                        <li><a href="login.html">退出登录</a></li>
+                    </ul>
+                </li>
+                <li><a href="needService.html">联系客服</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+ <span class="font-My-home">我的寝室</span>
+<main>
+<div class="dormitory-body">
+	<div class="Dbody-left">
+		<div class="Dbody-left-top"><span>Dormitory</span></div>
+		<div class="Dbody-left-middle">
+			<div class="Room Room-six">
+            <input type="text" readonly="readonly" class="room-num" value="xx-xxx">
+            <ul class="line-one">
+              <li class="clicked"></li>
+              <li></li>
+              <li></li>
+              <li class="clicked"></li>
+            </ul>
+            <ul class="line-two">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+		</div>
+		<div class="Dbody-left-bottom">
+			友情链接：
+			<br />
+			<a href="http://www.swpu.edu.cn/">西南石油大学官网</a>
+			<br />
+			<a href="http://www.swpu.edu.cn/dean/">西南石油大学教务处</a>
+		</div>
+	</div>
+	<div class="Dbody-right">
+		<ul>
+			<li>室友1
+				<ul>
+					<li>爱好：</li>
+					<li>年龄：</li>
+					<li>邮箱：</li>
+					<li>个性签名：</li>
+				</ul>
+			</li><hr />
+			<li>室友2
+				<ul>
+					<li>爱好：</li>
+					<li>年龄：</li>
+					<li>邮箱：</li>
+					<li>个性签名：</li>
+				</ul>
+			</li><hr />
+			<li>室友3
+					<ul>
+					<li>爱好：</li>
+					<li>年龄：</li>
+					<li>邮箱：</li>
+					<li>个性签名：</li>
+				</ul>
+			</li><hr />
+			<li>室友4
+					<ul>
+					<li>爱好：</li>
+					<li>年龄：</li>
+					<li>邮箱：</li>
+					<li>个性签名：</li>
+				</ul>
+			</li><hr />
+			<!--<li>室友5
+					<ul>
+					<li>爱好：</li>
+					<li>年龄：</li>
+					<li>邮箱：</li>
+					<li>个性签名：</li>
+				</ul>
+			</li><hr />
+			<li>室友6
+				<ul>
+					<li>爱好：</li>
+					<li>年龄：</li>
+					<li>邮箱：</li>
+					<li>个性签名：</li>
+				</ul>
+			</li>-->
+		</ul>
+	</div>
+</div>
+</main>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

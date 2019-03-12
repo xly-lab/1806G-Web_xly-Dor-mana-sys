@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>西南石油大学-寝室管理</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/homepage.css" rel="stylesheet">
+    <link href="css/nav-bar.css" rel="stylesheet">
+  <style>
+
+  .Room,.room-num{
+    cursor: pointer;
+    transition: 1s;
+  }
+  .room-num:hover{
+    background: #dec096;
+  }
+</style>
+</head>
+
+<body>
+<!--导航栏-->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid nav-center">
+        <div class="navbar-header">
+       <!--     <a class="navbar-brand" href="#">学生自助寝室管理系统</a>-->
+            <img  src="img/logo2.jpg">
+        </div>
+        <div class="nav-right">
+            <ul class="nav navbar-nav">
+                <li><a href="homepage.html">选寝室</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        我的
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="mydo.html">我的寝室</a></li>
+                        <li><a href="message.html">个人信息</a></li>
+                        <li><a href="fixNews.html">修改信息</a></li>
+                        
+                        <li><a href="login.html">退出登录</a></li>
+                    </ul>
+                </li>
+                <li><a href="needService.html">联系客服</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--导航栏结束-->
+
+<ul class="Progress">
+    <li id="chooseroom" class="active"><span></span>1.选择寝室</li>
+    <li id="choosebed"><span></span>2.选择床位</li>
+    <li id="confirm"><span></span>3.确认</li>
+</ul>
+<main>
+  <!--选择寝室号-->
+  <div class="choose_room">
+    <div id="main-left">
+        <div class="Room Room-six">
+            <input type="text" readonly="readonly" class="room-num" value="17-509">
+            <ul class="line-one">
+                <li class="clicked"></li>
+                <li></li>
+                <li></li>
+                <li class="clicked"></li>
+            </ul>
+            <ul class="line-two">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="Room Room-six">
+            <input type="text" readonly="readonly" class="room-num" value="17-508">
+            <ul class="line-one">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul class="line-two">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="Room Room-four">
+            <input type="text" readonly="readonly" class="room-num" value="17-510">
+            <ul class="line-one">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul class="line-two">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="Room Room-four">
+            <input type="text" readonly="readonly" class="room-num" value="17-509">
+            <ul class="line-one">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul class="line-two">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+       <div class="Room Room-two">
+            <input type="text" readonly="readonly" class="room-num" value="17-511">
+            <ul class="line-one">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul class="line-two">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="Room Room-two">
+            <input type="text" readonly="readonly" class="room-num" value="17-512">
+            <ul class="line-one">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul class="line-two">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="Room Room-six">
+            <input type="text" readonly="readonly" class="room-num" value="17-516">
+            <ul class="line-one">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul class="line-two">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="Room Room-six">
+            <input type="text" readonly="readonly" class="room-num" value="17-518">
+            <ul class="line-one">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul class="line-two">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <div id="main-right">
+              <form class="form-horizontal" role="form">
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">姓名</label>
+                  <div class="col-sm-8">
+                    <p class="form-control-static">张三</p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">学号</label>
+                  <div class="col-sm-8">
+                    <p class="form-control-static">201631111111</p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">所选寝室</label>
+                  <div class="col-sm-8">
+                    <p class="form-control-static" id="room-num-red">还未选寝室</p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-6 col-sm-12">
+                    <button type="button" class="btn btn-primary" id="select">确定房间</button>
+                    <br>
+                    <!--<span class="error_room_num">你还未选择寝室</span>-->
+                  </div>
+            </div>
+        </form>
+    </div>
+    <div id="main-bottom-left">
+        <ul class="pagination">
+            <li><a href="#">&laquo;</a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </div>
+    <ul id="main-bottom-right">
+        <li><img src="img/emptybed.png">可选</li>
+        <li><img src="img/clicked.png">已被选</li>
+        <li><img src="img/doublebed.png">上下铺</li>
+    </ul>
+  </div>
+  <!--选择床位-->
+  <div class="choose_bed">
+      <div id="main-left-next1">
+        <div class="bed-choosed">
+          <div class="Room Room-six Bed-choosed">
+            <input type="text" readonly="readonly" class="room-num" value="xx-xxx">
+            <ul class="line-one">
+              <li class="clicked"></li>
+              <li></li>
+              <li></li>
+              <li class="clicked"></li>
+            </ul>
+            <ul class="line-two">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <div id="main-right-next1">
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label class="col-sm-4 control-label">姓名</label>
+          <div class="col-sm-8">
+            <p class="form-control-static">张三</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-4 control-label">学号</label>
+          <div class="col-sm-8">
+            <p class="form-control-static">201631111111</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-4 control-label">所选床位</label>
+          <div class="col-sm-8">
+            <p class="form-control-static" id="room-num-red-next">还未选床位</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-6 col-sm-12">
+            <button type="button" class="btn btn-primary" id="select-bed">确定床位</button>
+            <br>
+            <!--<span class="error_room_num">你还未选择寝室</span>-->
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+   </div>
+  <!--确认-->
+  <div class="choose_confirm">
+    <div class="affirm_news">
+      <div class="affirm_header">
+        <span>确认寝室信息</span>
+      </div>
+      <div class="affirm_middle">
+        <ul>
+          <li class="sure-one">姓名：</li>
+          <li>学号：</li>
+          <li>寝室号：</li>
+          <li>你的床位号：</li>
+          <li>现在已有成员人数：</li>
+        </ul>
+      </div>
+      <button>确认</button>
+    </div>
+  </div>
+  <!--最后跳转到我的寝室页面-->
+  <div class="jump-to-my">
+    页面正在跳转中....
+  </div>
+</main>
+
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/select-room.js"></script>
+</body>
+</html>

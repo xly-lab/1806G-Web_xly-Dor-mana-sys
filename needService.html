@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>西南石油大学-寝室管理</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/homepage.css" rel="stylesheet">
+    <link href="css/nav-bar.css" rel="stylesheet">
+  <style>
+  	body{
+  		margin: 0;
+  		padding: 0;
+  		position: relative;
+  	}
+.font-My-home{
+      position: absolute;
+      height: 73px;
+      width: 600px;
+      font-size: 32px;
+      line-height: 73px;
+      text-align: center;
+      color: rgb(16,45,105);
+      left: 260px;
+      top: 0;
+      font-weight: 700;
+      font-family:"仿宋";
+    }
+</style>
+</head>
+
+<body>
+<!--导航栏-->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid nav-center">
+        <div class="navbar-header">
+       <!--     <a class="navbar-brand" href="#">学生自助寝室管理系统</a>-->
+            <img  src="img/logo1.jpg">
+        </div>
+        <div class="nav-right">
+            <ul class="nav navbar-nav">
+                <li><a href="homepage.html">选寝室</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        我的
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="mydo.html">我的寝室</a></li>
+                        <li><a href="message.html">个人信息</a></li>
+                        <li><a href="fixNews.html">修改信息</a></li>
+                        <li><a href="login.html">退出登录</a></li>
+                    </ul>
+                </li>
+                <li><a href="needService.html">联系客服</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+ <span class="font-My-home">联系客服</span>
+ <main>
+	<div class="warning">
+		很抱歉！我们暂时没有客服！<br />
+		3秒后给予提示！
+	</div>
+</main>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+	$(function(){
+		setInterval(function(){
+			if(confirm("是否离开此网页？")){
+				location.href="mydo.html";
+			}
+		},3000)
+		
+		
+	});
+</script>
+</body>
+</html>

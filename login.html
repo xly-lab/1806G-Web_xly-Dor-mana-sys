@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="css/login.css">
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <!--<script src="../jquery-1.11.1.js"></script>-->
+</head>
+<!--<style>-->
+  <!--from #login:hover{-->
+    <!--cursor: pointer;-->
+  <!--}-->
+<!--</style>-->
+<body>
+<div class="container">
+    <div class="left">
+        <span class="school_logo">西南石油大学</span>
+        <div class="logo"></div>
+    </div>
+    <div class="main">
+        <h1>学生寝室管理系统</h1>
+        <h2>用户登录</h2>
+        <form action="">
+            <li>
+                <input type="text" id="admin" value="" placeholder="请输入学号(123)"/>
+            </li>
+            <li>
+                <input type="password" id="password" value="" placeholder="请输入密码(123)"/>
+            </li>
+            <li>
+                <span class="hide">请联系管理员重置密码</span><span id="forget_pass">忘记密码</span>
+            </li>
+            <li>
+                <input  type="button" id="login" value="登录"/><br>
+              <!--<a href="homepage.html">hhhh</a>-->
+              <span class="error_login">信息输入有误</span>
+            </li>
+        </form>
+    </div>
+</div>
+<script>
+  var forget=document.querySelector("#forget_pass");
+  var passError=document.querySelector('.hide');
+  // var admin=document.querySelector("#admin");
+  // var passWord=document.querySelector("#password");
+  // var login=document.querySelector("#login");
+  // var errorLogin=document.querySelector(".error_login");
+  forget.onclick=function () {
+    passError.className="show";
+  }
+
+  forget.onmouseout=function () {
+    passError.className='hide';
+  }
+  $(function () {
+    $(".error_login").hide();
+    $("#login").click(function (){
+      if($("#admin").val()==="123" && $("#password").val()==="123"){
+        //
+        // alert($("#password").val());
+        location.href="homepage.html";
+      }
+      // else if($("#admin").val()!=="123" && $("#password").val()!=="123"){
+      //   $(".error_login").show();
+      //   $("#login").mouseout(function () {
+      //     $(".error_login").hide();
+      //   });
+      // }
+      else $(".error_login").show();
+    });
+    $("#login").mouseleave(function () {
+      $(".error_login").hide();
+    });
+  })
+
+</script>
+</body>
+</html>

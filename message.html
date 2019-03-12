@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>寝室管理-个人信息</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/homepage.css" rel="stylesheet">
+    <link href="css/nav-bar.css" rel="stylesheet">
+    <link href="css/message.css" rel="stylesheet">
+  <style>
+    .error_choose{
+      display: none;
+      color: red;
+      font-size: 10px;
+    }
+     .font-My-home{
+      position: absolute;
+      height: 73px;
+      width: 600px;
+      font-size: 32px;
+      line-height: 73px;
+      text-align: center;
+      color: rgb(16,45,105);
+      left: 260px;
+      top: 0;
+      font-weight: 700;
+      font-family:"仿宋";
+    }
+  </style>
+</head>
+<body>
+<!--导航栏-->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid nav-center">
+        <div class="navbar-header">
+            <!--     <a class="navbar-brand" href="#">学生自助寝室管理系统</a>-->
+            <img  src="img/logo1.jpg">
+        </div>
+        <div class="nav-right">
+            <ul class="nav navbar-nav">
+                <li><a href="homepage.html">选寝室</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        我的
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="mydo.html">我的寝室</a></li>
+                        <li><a href="fixNews.html">修改信息</a></li>
+                        <li><a href="message.html">个人信息</a></li>
+                        <li><a href="login.html">退出登录</a></li>
+                    </ul>
+                </li>
+                <li><a href="needService.html">联系客服</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<span class="font-My-home">个人信息</span>
+<!--导航栏结束-->
+<main>
+    <h1>个人信息</h1>
+    <hr/>
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">姓名</label>
+            <div class="col-sm-10">
+                <p class="form-control-static">****</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">学号</label>
+            <div class="col-sm-10">
+                <p class="form-control-static">2016310****11</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">邮箱</label>
+            <div class="col-sm-10">
+                <p class="form-control-static">111111@qq.com</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">所在寝室</label>
+            <div class="col-sm-10">
+                <p class="form-control-static">您还未选择你的寝室</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">性格及兴趣爱好</label>
+            <div class="col-sm-10">
+                <p class="form-control-static"><span id="interests-num">0</span>/10<span class="error_choose">   最多只能选十个，请仔细挑选最适合的标签</span></p>
+            </div>
+            <div class="col-sm-offset-2 col-sm-10" id="add-interest">
+                <button type="button" class="btn btn-default interests ">唱歌</button>
+                <button type="button" class="btn btn-default interests">足球</button>
+                <button type="button" class="btn btn-default interests">篮球</button>
+                <button type="button" class="btn btn-default interests">羽毛球</button>
+                <button type="button" class="btn btn-default interests">舞蹈</button>
+                <button type="button" class="btn btn-default interests">安静</button>
+                <button type="button" class="btn btn-default interests">活泼</button>
+                <button type="button" class="btn btn-default interests">唱歌</button>
+                <button type="button" class="btn btn-default interests">足球</button>
+                <button type="button" class="btn btn-default interests">篮球</button>
+                <button type="button" class="btn btn-default interests">羽毛球</button>
+                <button type="button" class="btn btn-default interests">舞蹈</button>
+                <button type="button" class="btn btn-default interests">安静</button>
+                <button type="button" class="btn btn-default interests">活泼</button>
+                <button type="button" class="btn btn-default interests">唱歌</button>
+                <button type="button" class="btn btn-default interests">足球</button>
+                <button type="button" class="btn btn-default interests">篮球</button>
+                <button type="button" class="btn btn-default interests">羽毛球</button>
+                <button type="button" class="btn btn-default interests">唱歌</button>
+                <button type="button" class="btn btn-default interests">足球</button>
+                <button type="button" class="btn btn-default interests">篮球</button>
+                <button type="button" class="btn btn-default interests">羽毛球</button>
+                <button type="button" class="btn btn-default interests">舞蹈</button>
+                <button type="button" class="btn btn-default interests">安静</button>
+                <button type="button" class="btn btn-default interests">活泼</button>
+                <button type="button" class="btn btn-default interests">唱歌</button>
+                <button type="button" class="btn btn-default interests">足球</button>
+                <button type="button" class="btn btn-default interests">篮球</button>
+                <button type="button" class="btn btn-default interests">羽毛球</button>
+                <button type="button" class="btn btn-default interests">舞蹈</button>
+                <button type="button" class="btn btn-default interests">安静</button>
+                <button type="button" class="btn btn-default interests">活泼</button>
+                <button type="button" class="btn btn-default interests">唱歌</button>
+                <button type="button" class="btn btn-default interests">足球</button>
+                <button type="button" class="btn btn-default interests">篮球</button>
+                <button type="button" class="btn btn-default interests">羽毛球</button>
+            </div>
+        </div>
+    </form>
+
+
+</main>
+
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/message.js"></script>
+</body>
+</html>
